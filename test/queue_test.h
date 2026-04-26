@@ -1,21 +1,22 @@
 /*
  * @Author: git-zenghw zhw15159517501@163.com
- * @Date: 2026-04-25 21:03:13
- * @LastEditTime: 2026-04-26 20:17:46
+ * @Date: 2026-04-26 11:24:10
+ * @LastEditTime: 2026-04-26 11:37:17
  * @Description: 
  * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
  */
 
-#ifndef PRT_LED_H
-#define PRT_LED_H
-
+#ifndef QUEUE_TEST_H
+#define QUEUE_TEST_H
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "key_event.h"
 
+#include "common.h"
 
-void led_handle_for_key_event(key_event_t event);
+#if QUEUE_TEST
+void queue_test(void);
+#endif
 
 #ifdef __cplusplus
 }

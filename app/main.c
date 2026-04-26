@@ -10,9 +10,11 @@
 #include "sensor_factory.h"
 #include "key.h"
 #include "prt_led.h"
-#include "key_subject.h"
+#include "key_event.h"
+#include "queue_test.h"
 
 
+#if OBSERVER_PATTERN_MODEL
 void observer_pattern_test(void)
 {
     set_key_state(KEY_PRESSED);
@@ -30,7 +32,9 @@ void observer_pattern_test(void)
     key_scan();
     sleep(3);
 }
+#endif
 
+#if FACTORY_PATTERN_MODEL
 void factory_test(void)
 {
     // sensor_factory_init(); // 手动注册
@@ -41,18 +45,59 @@ void factory_test(void)
         sensor->init();
     }
 }
+#endif
+
+#if PUBLISH_SUBSCRIBE_MODEL
+void publish_subscribe_test(void)
+{
+    set_key_state(KEY_PRESSED);
+    key_scan();
+    set_key_state(KEY_RELEASED);
+    key_scan();
+    key_event_loop();
+    sleep(3);
+
+    set_key_state(KEY_PRESSED);
+    key_scan();
+    key_scan();
+    key_scan();
+    key_scan();
+    set_key_state(KEY_RELEASED);
+    key_scan();
+    key_event_loop();
+    sleep(3);
+
+}
+#endif
 
 
 int main(int argc, char *argv[])
 {
-    key_init();
-    led_init();
+    #if FACTORY_PATTERN_MODEL
     factory_test();
+    #endif
 
+    #if OBSERVER_PATTERN_MODEL
     key_subject_register(led_handle_for_key_event);
-    
+    #endif
+
+    #if QUEUE_TEST
+    queue_test();
+    #endif
+
+    #if PUBLISH_SUBSCRIBE_MODEL
+    key_event_init();
+    key_event_subscribe(led_handle_for_key_event);
+    #endif
+
+
     while (1) {
+        #if OBSERVER_PATTERN_MODEL
         observer_pattern_test();
+        #endif
+        #if PUBLISH_SUBSCRIBE_MODEL
+        publish_subscribe_test();
+        #endif
     }
 
     return 0;
