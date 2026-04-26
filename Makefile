@@ -14,7 +14,8 @@ TOP_DIR := .
 APP_DIR := $(TOP_DIR)/app
 PRT_DIR := $(TOP_DIR)/prt
 DRV_DIR	:= $(TOP_DIR)/drv
-PROJECT_DIR := $(APP_DIR) $(PRT_DIR) $(DRV_DIR)
+TEST_DIR := $(TOP_DIR)/test
+PROJECT_DIR := $(APP_DIR) $(PRT_DIR) $(DRV_DIR) $(TEST_DIR)
 
 # c源文件
 C_SRC_DIR := $(PROJECT_DIR)
@@ -34,7 +35,8 @@ C_BUILD_OBJS := $(patsubst %.$(C_SUFFIX), $(OBJS_DIR)/%.$(OBJ_SUFFIX), $(C_SRC))
 # 头文件
 INC_DIR := -I$(APP_DIR) \
 	   -I$(PRT_DIR) \
-	   -I$(DRV_DIR)
+	   -I$(DRV_DIR) \
+	   -I$(TEST_DIR)
 
 C_FLAGS += -fpic -Wall
 
