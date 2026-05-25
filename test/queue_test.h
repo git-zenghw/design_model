@@ -3,7 +3,6 @@
  * @Date: 2026-04-26 11:24:10
  * @LastEditTime: 2026-04-26 11:37:17
  * @Description: 
- * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
  */
 
 #ifndef QUEUE_TEST_H

@@ -3,7 +3,6 @@
  * @Date: 2026-04-23 16:00:21
  * @Description: 
  * @LastEditTime: 2026-04-23 19:27:55
- * Copyright (c) 2023 by 汇创智控科技有限公司, All Rights Reserved
  */
 
 #ifndef SENSOR_FACTORY_H

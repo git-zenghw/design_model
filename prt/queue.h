@@ -3,7 +3,6 @@
  * @Date: 2026-04-26 11:01:45
  * @LastEditTime: 2026-04-26 11:17:11
  * @Description: 提供队列接口
- * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
  */
 
 #ifndef QUEUE_H

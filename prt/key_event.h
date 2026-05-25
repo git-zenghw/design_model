@@ -3,7 +3,6 @@
  * @Date: 2026-04-26 10:51:39
  * @LastEditTime: 2026-04-26 20:08:47
  * @Description: 
- * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
  */
 
 #ifndef KEY_EVENT_H

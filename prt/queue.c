@@ -3,7 +3,6 @@
  * @Date: 2026-04-26 11:01:33
  * @LastEditTime: 2026-04-26 20:18:58
  * @Description: 实现队列功能
- * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
  */
 
 #include "queue.h"

@@ -3,7 +3,6 @@
  * @Date: 2026-04-26 10:33:27
  * @LastEditTime: 2026-04-26 20:13:52
  * @Description: 
- * Copyright (c) 2026 by ${git_name_email}, All Rights Reserved. 
  */
 
 #ifndef COMMON_H

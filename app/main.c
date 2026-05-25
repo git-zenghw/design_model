@@ -2,8 +2,6 @@
  * @Author: zenghw
  * @Date: 2026-04-23 14:12:32
  * @Description: 
- * 
- * Copyright (c) 2023 by 汇创智控科技有限公司, All Rights Reserved
  */
 #include <stdio.h>
 #include <unistd.h>
